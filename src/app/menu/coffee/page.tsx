@@ -4,6 +4,8 @@ export const metadata = {
   title: "Coffee"
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function Coffee() {
   const result = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getCoffee`);
   const data = await result.json();

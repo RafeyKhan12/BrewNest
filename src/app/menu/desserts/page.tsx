@@ -4,6 +4,8 @@ export const metadata = {
   title: "Desserts"
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function Dessert() {
   const result = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getDessert`);
   const data = await result.json();
